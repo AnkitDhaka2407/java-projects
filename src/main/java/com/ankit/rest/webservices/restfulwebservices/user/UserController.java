@@ -1,5 +1,6 @@
 package com.ankit.rest.webservices.restfulwebservices.user;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -31,7 +32,7 @@ public class UserController {
     }
 
     @PostMapping(path = "/users")
-    public ResponseEntity<Object> getAllUsers(@RequestBody User user) {
+    public ResponseEntity<Object> getAllUsers(@Valid @RequestBody User user) {
         User addedUser = userDaoService.addUser(user);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
