@@ -1,4 +1,4 @@
-package com.ankit.rest.webservices.restfulwebservices.controller;
+package com.ankit.rest.webservices.restfulwebservices.helloworld;
 
 public class HellloWorldBean {
     private String message;
